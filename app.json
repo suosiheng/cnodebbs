@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/topic/topic"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "全部"
+      }, 
+      {
+        "pagePath": "pages/index/index",
+        "text": "精华"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "分享"
+      }, 
+      {
+        "pagePath": "pages/index/index",
+        "text": "问答"
+      }, 
+      {
+        "pagePath": "pages/index/index",
+        "text": "招聘"
+      }
+    ],
+    "position": "top"
+  },
+  "sitemapLocation": "sitemap.json"
+}

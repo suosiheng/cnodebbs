@@ -1,0 +1,44 @@
+<import src="../../towxml/entry.wxml"/>
+<view class="container">
+    <scroll-view scroll-y style="height: {{scroll_height}}rpx;">
+        <view class="topic-head">
+            <view class="topic-title">
+                <text wx:if="{{topicinfo.top == true}}" class="tab-type-top">置顶</text>
+                <text wx:elif="{{topicinfo.top == false && topicinfo.tab == 'share'}}" class="tab-type-all">分享</text>
+                <text wx:elif="{{topicinfo.top == false && topicinfo.tab == 'ask'}}" class="tab-type-all">问答</text>
+                <text wx:elif="{{topicinfo.top == false && topicinfo.tab == 'good'}}" class="tab-type-all">精华</text>
+                <text wx:else class="tab-type-all">招聘</text>
+                <text class="topic-title-text">{{topicinfo.title}}</text>
+            </view>
+            <view class="topic-pubinfo">
+                <view class="topic-pubinfo-first">
+                    <view class="topic-pubinfo-author">
+                        <view class="topic-pubinfo-author-text">作者：{{topicinfo.author.loginname}}</view>
+                    </view>
+                    <view class="topic-pubinfo-wid">浏览：{{topicinfo.visit_count}}</view>
+                    <view class="topic-pubinfo-wid">评论：{{topicinfo.reply_count}}</view>
+                </view>
+                <view class="topic-pubinfo-second">发表：{{topicinfo.create_at}}</view>
+            </view>
+        </view>
+
+        <view class="topic-content"><template is="entry" data="{{...topicinfo.content}}"/></view>
+
+        <view class="topic-reply">
+            <view class="topic-reply-counts">{{topicinfo.reply_count}}回复</view>
+            <view class="topic-reply-list">
+                <view class="topic-reply-info" wx:for="{{topicinfo.replies}}">
+                    <view class="topic-reply-info-author">
+                        <image class="topic-reply-info-author-image" src="{{item.author.avatar_url}}" />
+                        <view class="topic-bottom-author-text">{{item.author.loginname}}</view>
+                    </view>
+                    <view class="topic-reply-info-content"><template is="entry" data="{{...item.content}}"/></view>
+                    <view class="topic-reply-info-related">
+                        <view class="topic-reply-wid">点赞： {{item.ups_num}}</view>
+                        <view class="topic-reply-wid">时间：{{item.create_at}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+</view>

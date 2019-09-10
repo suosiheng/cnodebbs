@@ -1,0 +1,121 @@
+/* @import '../../towxml/style/main.wxss'; */
+/* @import '../../towxml/style/theme/light.wxss'; */
+/* @import '../../towxml/style/theme/dark.wxss'; */
+
+.container{
+    width: 100%;
+}
+
+.topic-head{
+    margin: 0 40rpx 20rpx 40rpx;
+    border-bottom: 1px solid gainsboro;
+}
+
+.topic-title{
+    display: flex;
+}
+
+.topic-pubinfo-first{
+    display: flex;
+}
+
+.tab-type-top{
+    width: 10%;
+    background-color: green;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .tab-type-all{
+    width: 10%;
+    background-color: lightgrey;
+    color: rgb(31, 29, 29);
+    display: flex;
+    justify-content: center;
+  }
+
+  .topic-title-text{
+    margin-left: 1%;
+    font-size: 16px;
+  }
+
+  .topic-pubinfo{
+      color: gray;
+      font-size: 14px;
+      margin: 20rpx 0 20rpx 0;
+  }
+
+  .topic-pubinfo-author-text{
+    padding-right: 15px;
+  }
+  
+  .topic-pubinfo-wid{
+    height: 18px;
+    border-left: 1px solid grey;
+    display: flex;
+    justify-content: center;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .topic-content{
+      padding-top: 0rpx;
+      /* border-bottom: 1px solid gainsboro; */
+      margin: 0 40rpx 40rpx 40rpx;
+      font-size: 14px;
+  }
+
+  .topic-reply{
+    margin: 0 40rpx 20rpx 40rpx;
+  }
+
+  .topic-reply-counts{
+      color: grey;
+      font-size: 12px;
+      border-bottom: 1px solid gainsboro;
+      border-top: 1px solid gainsboro;
+      padding: 10px 0 10px 0;
+  }
+
+  .topic-reply-info{
+    border-bottom: 1px solid gainsboro;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+    font-size: 12px;
+  }
+
+  .topic-reply-info-related{
+      color: grey;
+      font-size: 12px;
+      display: flex;
+  }
+
+  .topic-reply-wid{
+    display: flex;
+    justify-content: center;
+    padding-right: 15px;
+  }
+
+  .topic-reply-info-author{
+      display: flex;
+      height: 22px;
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: flex-start;
+  }
+
+  .topic-reply-info-author-image{
+    height: 20px;
+    width: 20px;
+    border-radius: 15%;
+  }
+
+  .topic-bottom-author-text{
+      margin-left: 2px;
+  }
+
+  .topic-reply-info-content{
+      margin-top: 15rpx;
+      margin-bottom: 15rpx;
+  }

@@ -1,0 +1,27 @@
+<view class="container">
+
+  <scroll-view scroll-y style="height: {{scroll_height}}rpx;" bindscrolltolower="lower">
+  <view class="topiclist" wx:for="{{topics}}">
+    <view class="topic-title">
+      <view wx:if="{{item.top == true}}" class="tab-type-top">置顶</view>
+      <view wx:elif="{{item.top == false && item.tab == 'share'}}" class="tab-type-all">分享</view>
+      <view wx:elif="{{item.top == false && item.tab == 'ask'}}" class="tab-type-all">问答</view>
+      <view wx:elif="{{item.top == false && item.tab == 'good'}}" class="tab-type-all">精华</view>
+      <view wx:else class="tab-type-all">招聘</view>
+      <view class="topic-title-text"><navigator url="/pages/topic/topic?id={{item.id}}" hover-class="navigator-hover">{{item.title}}</navigator></view>
+    </view>
+
+    <view class="topic-content">{{item.content}}</view>
+
+    <view class="topic-bottom">
+      <view class="topic-bottom-author">
+        <image src="{{item.author.avatar_url}}" />
+        <view class="topic-bottom-author-text">{{item.author.loginname}}</view>
+      </view>
+      <view class="topic-bottom-wid">浏览：{{item.visit_count}}</view>
+      <view class="topic-bottom-wid">评论：{{item.reply_count}}</view>
+    </view>
+  </view>
+  </scroll-view>
+
+</view>
